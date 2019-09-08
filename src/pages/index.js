@@ -11,9 +11,9 @@ import styled from "styled-components"
 import formatDate from "../utils/formatDate"
 
 const StyledLink = styled(Link)`
-  color: ${({ theme }) => theme.primary};
   box-shadow: none;
   font-family: ${({ theme }) => theme.font};
+  color: ${({ theme }) => theme.primary};
 `
 
 const PreviewContainer = styled.div`
