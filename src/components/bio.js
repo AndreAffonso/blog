@@ -6,41 +6,43 @@
  */
 
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Image from "gatsby-image"
 
-import { rhythm } from "../utils/typography"
+import styled from "styled-components"
+
+const P = styled.p`
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+`
 
 const Bio = () => {
-  const data = useStaticQuery(graphql`
-    query BioQuery {
-      avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
-        childImageSharp {
-          fixed(width: 50, height: 50) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-      site {
-        siteMetadata {
-          author
-          social {
-            twitter
-          }
-        }
-      }
-    }
-  `)
+  // const data = useStaticQuery(graphql`
+  //   query BioQuery {
+  //     avatar: file(absolutePath: { regex: "/profile.jpg/" }) {
+  //       childImageSharp {
+  //         fixed(width: 64, height: 64) {
+  //           ...GatsbyImageSharpFixed
+  //         }
+  //       }
+  //     }
+  //     site {
+  //       siteMetadata {
+  //         author
+  //         social {
+  //           twitter
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
 
-  const { author, social } = data.site.siteMetadata
+  // const { author, social } = data.site.siteMetadata
   return (
     <div
       style={{
         display: `flex`,
-        marginBottom: rhythm(2.5),
       }}
     >
-      <Image
+      {/* <Image
         fixed={data.avatar.childImageSharp.fixed}
         alt={author}
         style={{
@@ -52,15 +54,12 @@ const Bio = () => {
         imgStyle={{
           borderRadius: `50%`,
         }}
-      />
-      <p>
-        Written by <strong>{author}</strong> who lives and works in San
-        Francisco building useful things.
-        {` `}
-        <a href={`https://twitter.com/${social.twitter}`}>
-          You should follow him on Twitter
-        </a>
-      </p>
+      /> */}
+      <P>
+        Desenvolvedor Front End na <strong>Pier</strong>. <br />
+        Escrevo sobre desenvolvimento <i>web</i> e algumas aleatoriedades
+        &#128579;
+      </P>
     </div>
   )
 }

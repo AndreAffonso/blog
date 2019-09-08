@@ -6,11 +6,15 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
 
+import formatDate from "../utils/formatDate"
+
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
+
+    const dateValues = post.frontmatter.date.split("-")
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -33,7 +37,7 @@ class BlogPostTemplate extends React.Component {
             marginBottom: rhythm(1),
           }}
         >
-          {post.frontmatter.date}
+          {formatDate(post.frontmatter.date)} 
         </p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
@@ -41,7 +45,7 @@ class BlogPostTemplate extends React.Component {
             marginBottom: rhythm(1),
           }}
         />
-        <Bio />
+        {/* <Bio /> */}
 
         <ul
           style={{
@@ -88,7 +92,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date
         description
       }
     }
