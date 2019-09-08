@@ -10,26 +10,6 @@ import GlobalStyle from "../styles/global"
 
 import Navbar from "../components/navbar"
 
-const ThemeButton = styled.button`
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  background: unset;
-  color: ${props => props.colors.primary};
-  border: 2px solid ${props => props.colors.primary};
-  border-radius: 2px;
-  outline: none;
-  font-weight: 600;
-  cursor: pointer;
-  font-family: "Montserrat", sans-serif;
-  transition: background-color 0.2s ease-in-out;
-
-  &:hover {
-    background: ${props => props.colors.primary};
-    color: ${props => props.colors.background};
-  }
-`
-
 const Layout = ({ location, title, children }) => {
   const [theme, setTheme] = useLocalStorage("theme", "light")
   const onToggleTheme = () =>
@@ -110,9 +90,6 @@ const Layout = ({ location, title, children }) => {
             theme={theme}
           />
 
-          {/* <ThemeButton onClick={onToggleTheme} colors={themes[theme]}>
-            {theme === "dark" ? "light" : "dark"} mode
-          </ThemeButton> */}
           <main>{children}</main>
           <footer>
             © {new Date().getFullYear()}, Built with

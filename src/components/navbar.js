@@ -164,7 +164,7 @@ const Navbar = ({ theme, colors, onToggleTheme }) => {
 
         <Links>
           <StyledLink to="/">Sobre mim</StyledLink>
-          <StyledLink>Posts</StyledLink>
+          <StyledLink to="/">Posts</StyledLink>
         </Links>
         <Switch theme={theme} colors={colors} onToggleTheme={onToggleTheme} />
       </Container>

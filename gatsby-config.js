@@ -58,13 +58,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `André Affonso Blog`,
+        name: `André Affonso`,
         short_name: `André Affonso`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#A682FF`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/aa.png`,
       },
     },
     `gatsby-plugin-offline`,
