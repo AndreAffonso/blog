@@ -2,6 +2,7 @@ import { createGlobalStyle } from "styled-components"
 
 const globalStyle = createGlobalStyle`
 html {
+  background: #282a36;
   font-family: 'Montserrat', sans-serif;
   background-color: ${props => props.theme.background};
 

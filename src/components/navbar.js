@@ -163,8 +163,8 @@ const Navbar = ({ theme, colors, onToggleTheme }) => {
         </CleanLink>
 
         <Links>
-          <StyledLink to="/">Sobre mim</StyledLink>
           <StyledLink to="/">Posts</StyledLink>
+          <StyledLink to="/about">Sobre mim</StyledLink>
         </Links>
         <Switch theme={theme} colors={colors} onToggleTheme={onToggleTheme} />
       </Container>

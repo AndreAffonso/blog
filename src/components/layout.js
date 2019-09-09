@@ -11,7 +11,7 @@ import GlobalStyle from "../styles/global"
 import Navbar from "../components/navbar"
 
 const Layout = ({ location, title, children }) => {
-  const [theme, setTheme] = useLocalStorage("theme", "light")
+  const [theme, setTheme] = useLocalStorage("theme", "dark")
   const onToggleTheme = () =>
     theme === "light" ? setTheme("dark") : setTheme("light")
 
