@@ -57,7 +57,7 @@ class About extends React.Component {
           Gosto bastante de futebol, cinema, história e economia. Criei o blog
           para reunir meus estudos e experiências em desenvolvimento de software
           e contribuir com a comunidade de alguma maneira. Qualquer dúvida,
-          crítica ou sugestão, fica a vontade para me mandar um{" "}
+          crítica ou sugestão, fique a vontade para me mandar um{" "}
           <a href="mailto:webmaster@example.com">email </a>.
         </p>
       </Layout>
