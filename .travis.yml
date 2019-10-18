@@ -13,11 +13,11 @@ before_deploy:
   - yarn run build
 deploy:
   provider: s3
-  access_key_id: AKIA6PB3GS6QVRMKR3PD
-  secret_access_key: 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
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
   bucket: andreaffonso.com
   skip_cleanup: true
-  local-dir: dist
+  local-dir: public
   on:
     branch: master
 after_deploy:
